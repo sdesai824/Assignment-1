@@ -20,7 +20,7 @@ CREATE TABLE characters (
 
 CREATE TABLE movies (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  studio_id INTEGER,
+  studio_name TEXT,
   actor_id INTEGER,
   title TEXT,
   year_released TEXT,
