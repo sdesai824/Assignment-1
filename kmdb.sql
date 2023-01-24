@@ -214,5 +214,9 @@ SELECT title, year_released, mpaa_rating, studio_name FROM movies;
 
 -- The SQL statement for the cast output
 SELECT movies.title, actors.first_name, actors.last_name, characters.first_name, characters.last_name
-FROM movies INNER JOIN actors ON actors.ID = movies.actor_id
-INNER JOIN characters on movies.ID = characters.movie_id;
+FROM characters 
+INNER JOIN actors ON actors.id = characters.actor_id
+INNER JOIN movies ON movies.id = characters.movie_id;
+
+--FROM movies INNER JOIN actors ON movies.actor_id = actors.id
+--INNER JOIN characters on characters.movie_id = movies.id;
